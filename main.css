@@ -1,0 +1,308 @@
+:root {
+  --main: #6a61f8;
+  --text: #282838;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+select,
+input {
+  background-color: gainsboro;
+  border: 1px solid gray;
+  color: gray;
+  border-radius: 0.5vh;
+}
+.top {
+  background-color: gainsboro;
+  width: 100%;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  background-color: var(--main);
+  display: flex;
+  align-items: center;
+  height: 5vh;
+}
+
+a {
+  margin-left: 2%;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.circle {
+  height: 50%;
+  aspect-ratio: 4/4;
+  border-radius: 10vh;
+  margin-left: 0.5%;
+}
+.red {
+  background-color: #fb2452;
+}
+.yellow {
+  background-color: #f7cb53;
+}
+.green {
+  background-color: #00e447;
+}
+
+.cartForm,
+.cartFinish {
+  margin-top: 2%;
+  width: 50%;
+  padding-bottom: 0;
+}
+
+.cartFinish {
+  border-left: gray 1px solid;
+  height: 100%;
+  padding: 1%;
+}
+
+.cartForm {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1vh;
+  grid-row-gap: 1vh;
+  height: 15%;
+  width: 100%;
+}
+
+.Main,
+#prodName,
+#prodAmnt,
+#uniPrice,
+#viewLink {
+  width: 100%;
+}
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #28283841;
+  opacity: 0;
+  z-index: -1;
+}
+.modalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  margin: 15vh auto;
+  background-color: white;
+  border-radius: 1vh;
+  overflow: hidden;
+}
+
+.modal.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.mainBtn {
+  background-color: var(--main);
+  border: none;
+  border-radius: 0.5vh;
+  font-weight: bold;
+  width: 100%;
+  color: var(--text);
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+.ProdWrap {
+  width: 50%;
+  padding: 1vh;
+  margin-top: 2%;
+}
+#prodForm {
+  width: 100%;
+  height: 5%;
+  display: flex;
+}
+
+#w-40 {
+  width: 40%;
+}
+#w-60 {
+  width: 60%;
+}
+
+#catForm {
+  height: 5%;
+  width: 100%;
+}
+
+#saveProd,
+#saveCat,
+#saveCart {
+  height: 5vh;
+  margin-top: 1vh;
+}
+
+.secBtn {
+  background-color: gray;
+  border: none;
+  border-radius: 0.5vh;
+  font-weight: bold;
+  width: 100%;
+  color: var(--text);
+}
+
+#selectProd,
+.mainBtn {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+#inputAmnt {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#catName {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#catTax {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.rowProd {
+  display: flex;
+}
+
+.Body {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+.tableWrap {
+  height: 80%;
+  width: 100%;
+  overflow-y: scroll;
+  border-radius: 1vh;
+}
+.cartTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.othRow {
+  width: 10%;
+}
+
+#center {
+  justify-content: center;
+}
+
+#historyFinish {
+  border-left: none;
+}
+#viewBtn {
+  height: 100%;
+}
+
+tr.othRow td,
+tr.othRow th {
+  border-right: solid 1px gray;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  height: 3vh;
+  padding-left: 0.5vh;
+}
+tr.othRow td#content,
+tr.othRow th#content {
+  border-top: 1px solid gray;
+}
+
+tr.othRow th#content {
+  border-top: none;
+}
+
+tr.othRow td:last-child,
+tr.othRow th:last-child {
+  border-right: none;
+}
+
+
+
+.finishForm {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+p {
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  color: var(--text);
+}
+.tFinish {
+  background-color: transparent;
+  border: none;
+  font-size: medium;
+  color: gray;
+}
+
+thead {
+    background-color: var(--text);
+    border-radius: 1vh;
+    text-align: left;
+    height: 2%;
+    color: white;
+
+}
+
+#finishWrap {
+    overflow: hidden;
+    outline: 1px solid gray;
+    border-radius: 1vh;
+}
+.tLabel {
+  font-weight: bold;
+}
+.priceFinal {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.priceWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.fRight {
+  width: 100%;
+  justify-content: right;
+  display: flex;
+}
+
+.btnWrapper {
+  height: 20%;
+  display: flex;
+  padding-left: 20vh;
+}
+.mL {
+  margin-left: 1vh;
+}
+.w30 {
+  width: 30%;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suite Store</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="Main">
+      <div class="Head">
+        <div class="top">
+          <div class="circle red"></div>
+          <div class="circle yellow"></div>
+          <div class="circle green"></div>
+        </div>
+        <nav>
+          <a href=""><h1>Suite Store</h1></a>
+
+          <a href="./src/products/products.html">Products</a>
+
+          <a href="./src/categories/categories.html">Categories</a>
+
+          <a href="./src/history/history.html">History</a>
+        </nav>
+      </div>
+      <div class="Body">
+        <div class="ProdWrap">
+          <form class="cartForm" id="cartForm">
+            <select
+              id="selectProd"
+              class="formInput"
+              data-index="new"
+              title="prod"
+              required
+            >
+              <option disabled selected>Product</option>
+            </select>
+
+            <input
+              id="inputAmnt"
+              class="formInput"
+              placeholder="Amount"
+              type="number"
+              required
+            />
+
+            <input
+              id="inputTax"
+              class="formInput"
+              disabled
+              placeholder="Tax"
+              type="number"
+            />
+
+            <input
+              id="inputUnit"
+              class="formInput"
+              disabled
+              placeholder="Price"
+              type="number"
+            />
+          </form>
+          <button class="mainBtn" id="saveCart">Add Product</button>
+        </div>
+        <div class="cartFinish">
+          <div class="tableWrap">
+            <table class="cartTable" id="cartTable">
+              <thead class="tHead">
+                <tr class="othRow">
+                  <th id="content" class="prodCol">Product</th>
+                  <th id="content">Price</th>
+                  <th id="content">Amount</th>
+                  <th id="content">Total</th>
+                  <th id="content">Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <form  class="finishForm">
+            <div class="priceFinal">
+              <div class="fRight">
+                <div class="w30" id="priceDisplay"></div>
+              </div>
+            </div>
+            <div class="btnWrapper">
+              <button class="secBtn mL" id="cancelPurchase">Cancel</button>
+              <button class="mainBtn mL" id="finishPurchase">Finish</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

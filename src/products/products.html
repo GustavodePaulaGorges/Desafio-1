@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../main.css" />
+    <script src="./product.js" defer></script>
+    <title>Suite Store</title>
+  </head>
+  <body>
+    <div class="Main">
+      <div class="Head">
+        <div class="top">
+          <div class="circle red"></div>
+          <div class="circle yellow"></div>
+          <div class="circle green"></div>
+        </div>
+        <nav>
+          <a href="../../index.html"><h1>Suite Store</h1></a>
+
+          <a href="">Products</a>
+
+          <a href="../categories/categories.html">Categories</a>
+
+          <a href="../history/history.html">History</a>
+        </nav>
+      </div>
+      <div class="Body">
+        <div class="ProdWrap" id="w-40">
+          <form class="cartForm" id="prodForm">
+            <input
+              type="text"
+              class="formInput"
+              data-index="new"
+              maxlength="24"
+              placeholder="Product Name"
+              id="prodName"
+              required
+            />
+
+            <input
+              type="number"
+              class="formInput"
+              min="0"
+              max="999"
+              placeholder="Amount"
+              id="prodAmnt"
+              required
+            />
+
+            <input
+              type="number"
+              class="formInput"
+              step="0.01"
+              min="0"
+              max="9999"
+              maxlength="10"
+              placeholder="Unit Price"
+              id="uniPrice"
+              required
+            />
+
+            <select id="prodCat" class="selectProd formInput" required></select>
+          </form>
+          <button class="mainBtn" id="saveProd">Add Product</button>
+        </div>
+
+        <div class="cartFinish" id="w-60">
+          <div class="tableWrap">
+            <table id="productTable" class="cartTable">
+              <thead class="tHead">
+                <tr class="othRow">
+                  <th id="content">Code</th>
+                  <th id="content">Product</th>
+                  <th id="content">Amount</th>
+                  <th id="content">Unit price</th>
+                  <th id="content">Category</th>
+                  <th id="content">Taxed price</th>
+                  <th id="content">Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
